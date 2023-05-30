@@ -1,0 +1,20 @@
+if (intentResult.getContents() !=null){
+            AlertDialog.Builder builder=new AlertDialog.Builder(
+                    MainActivity.this
+            );
+            builder.setTitle("result");
+            builder.setMessage(intentResult.getContents());
+            builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    dialogInterface.dismiss();
+
+                }
+            });
+            builder.show();
+
+        }else{
+            Toast.makeText(getApplicationContext(),"OOPS.... You did not scan anything",Toast.LENGTH_LONG)
+                    .show();
+
+        }
